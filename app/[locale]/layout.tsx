@@ -1,8 +1,9 @@
-import './globals.css';
 import { Inter } from 'next/font/google';
 import awsconfig from '@/aws-exports.js';
 import { Amplify } from 'aws-amplify';
 import type { Metadata } from 'next';
+
+import './globals.css';
 
 Amplify.configure({ ...awsconfig, ssr: true });
 
