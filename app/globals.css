@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+@layer components {
+  .centered {
+    @apply flex items-center justify-center;
+  }
+  .button {
+    @apply border rounded-sm p-2;
+  }
+}
