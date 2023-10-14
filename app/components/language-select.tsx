@@ -14,14 +14,12 @@ export default function LanguageSelect(): JSX.Element {
 
     const handleChange = (e: ChangeEvent<HTMLSelectElement>): void => {
         const newLocale = e.target.value;
-
         // set cookie for next-i18n-router
         const days = 30;
         const date = new Date();
         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
         const expires = `; expires=${date.toUTCString()}`;
         document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-
         // redirect to the new locale path
         if (
             currentLocale === i18nConfig.defaultLocale &&
