@@ -6,7 +6,7 @@ import i18nConfig from '@/i18n-config';
 
 export default async function initTranslations(
     locale: string,
-    namespaces: string[] = ['default']
+    namespaces: readonly string[] | string = ['default']
 ): Promise<i18n> {
     const i18nInstance = createInstance();
 
