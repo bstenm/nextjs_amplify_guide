@@ -47,6 +47,7 @@ export default async function CoinPrice({
                 </h2>
                 <p className="m-0 max-w-[30ch] text-sm opacity-50">
                     {data.name} cryptocurrency current value against the dollar.
+                    {data.name} cryptocurrency current value against the dollar.
                 </p>
             </div>
         </Suspense>
