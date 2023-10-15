@@ -1,1 +1,1 @@
-{"unexpectedError":"Something went wrong","leftHandPractice":"Practice writing with your left hand","errorFetchingTodoList":"Could not retrieve the todo list","errorFetchingCoinPrice":"Could not retrieve the coin price"}
+{"error":"error","errorFetchingCoinPrice":"could not retrieve the coin price","errorFetchingTodoList":"could not retrieve the todo list","leftHandPractice":"practice writing with your left hand","unexpectedError":"something went wrong"}

@@ -3,11 +3,11 @@ import '@aws-amplify/ui-react/styles.css';
 import TodoList from '@/app/features/todo-list';
 import translate from '@/app/i18n';
 import CoinPrice from '@/app/features/coin-price';
+import AsyncAction from '@/components/async-action';
 import { MenuSidebar } from '@/components/sidebar-menu';
 import LanguageSelect from '@/components/language-select';
 import ClientComponent from '@/components/client-component';
 import TranslationsProvider from '@/components/translations-provider';
-import AsyncAction from '@/components/AsyncAction';
 
 type Props = {
     locale: string;
