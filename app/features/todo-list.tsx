@@ -2,15 +2,10 @@ import { API } from 'aws-amplify';
 import compact from 'lodash/compact';
 import { GraphQLResult } from '@aws-amplify/api';
 
-import translate from '@/app/i18n';
 import { listTodos } from '@/graphql/queries';
 import { ListTodosQuery, Todo } from '@/API';
 
 import '@aws-amplify/ui-react/styles.css';
-
-type Props = {
-    locale: string;
-};
 
 async function fetchTodos(): Promise<Todo[]> {
     const todos = (await API.graphql({
@@ -22,11 +17,7 @@ async function fetchTodos(): Promise<Todo[]> {
     return items ? compact(items) : [];
 }
 
-export default async function TodoList({
-    locale
-}: Props): Promise<JSX.Element> {
-    const { t } = await translate(locale as string);
-
+export default async function TodoList(): Promise<JSX.Element> {
     const todos = await fetchTodos();
 
     return (
@@ -34,8 +25,6 @@ export default async function TodoList({
             <ul className="list-decimal">
                 {todos.map((todo: Todo) => (
                     <li key={todo.id}>
-                        {t('leftHandPractice')}
-                        <br />
                         {todo.name}
                         <p className="opacity-50">{todo.description}</p>
                     </li>

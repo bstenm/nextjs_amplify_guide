@@ -3,10 +3,11 @@ import '@aws-amplify/ui-react/styles.css';
 import TodoList from '@/app/features/todo-list';
 import translate from '@/app/i18n';
 import CoinPrice from '@/app/features/coin-price';
-import ErrorBoundary from '@/app/components/error-boundary';
-import TranslationsProvider from '@/app/components/translations-provider';
-import ClientComponent from '@/app/components/client-component';
-import LanguageSelect from '@/app/components/language-select';
+import { MenuSidebar } from '@/components/sidebar-menu';
+import LanguageSelect from '@/components/language-select';
+import ClientComponent from '@/components/client-component';
+import TranslationsProvider from '@/components/translations-provider';
+import AsyncAction from '@/components/AsyncAction';
 
 type Props = {
     locale: string;
@@ -20,12 +21,13 @@ export default async function Home({ locale }: Props): Promise<JSX.Element> {
             <main className="flex min-h-screen flex-col items-center justify-around  p-24">
                 <LanguageSelect />
                 <ClientComponent />
-                <ErrorBoundary message="Could not retrieve the  coin price">
+                <AsyncAction locale={locale} errorId="errorFetchingCoinPrice">
                     <CoinPrice coinNumber={35} />
-                </ErrorBoundary>
-                <ErrorBoundary message="Could not retrieve the todo list">
-                    <TodoList locale={locale} />
-                </ErrorBoundary>
+                </AsyncAction>
+                <AsyncAction locale={locale} errorId="errorFetchingTodoList">
+                    <TodoList />
+                </AsyncAction>
+                <MenuSidebar />
             </main>
         </TranslationsProvider>
     );

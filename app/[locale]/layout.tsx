@@ -5,8 +5,9 @@ import { Amplify } from 'aws-amplify';
 import type { Metadata } from 'next';
 
 import i18nConfig from '@/i18n-config';
+import { ThemeProvider } from '@/components/theme-provider';
 
-import './globals.css';
+import '@/app/globals.css';
 
 Amplify.configure({ ...awsconfig, ssr: true });
 
@@ -30,7 +31,15 @@ export default function RootLayout({
 }): JSX.Element {
     return (
         <html lang={locale} dir={dir(locale)}>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                    disableTransitionOnChange>
+                    {children}
+                </ThemeProvider>
+            </body>
         </html>
     );
 }
