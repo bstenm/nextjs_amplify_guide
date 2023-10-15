@@ -9,7 +9,7 @@ type Props = {
     messageId: string;
 };
 
-async function Message({
+export async function ErrorMessage({
     locale,
     content
 }: {
@@ -35,7 +35,7 @@ export default async function ErrorBoundary({
 
     return (
         <ReactErrorBoundary
-            fallback={<Message locale={locale} content={t(messageId)} />}>
+            fallback={<ErrorMessage locale={locale} content={t(messageId)} />}>
             {children}
         </ReactErrorBoundary>
     );

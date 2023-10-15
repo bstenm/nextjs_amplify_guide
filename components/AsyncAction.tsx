@@ -15,8 +15,10 @@ export default async function AsyncAction({
     children
 }: Props): Promise<JSX.Element> {
     return (
-        <ErrorBoundary locale={locale} messageId={errorId}>
-            <Suspense fallback={<Loader />}>{children}</Suspense>
-        </ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+            <ErrorBoundary locale={locale} messageId={errorId}>
+                {children}
+            </ErrorBoundary>
+        </Suspense>
     );
 }

@@ -1,1 +1,1 @@
-{"errorFetchingCoinPrice":"No se pudo recuperar el precio de la moneda.","errorFetchingTodoList":"No se pudo recuperar la lista de tareas pendientes","leftHandPractice":"Practica escribir con tu mano izquierda.","unexpectedError":"Algo salió mal"}
+{"unexpectedError":"Algo salió mal","leftHandPractice":"Practica escribir con tu mano izquierda.","errorFetchingTodoList":"No se pudo recuperar la lista de tareas pendientes","errorFetchingCoinPrice":"No se pudo recuperar el precio de la moneda."}
