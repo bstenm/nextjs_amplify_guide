@@ -17,8 +17,19 @@ export const metadata: Metadata = {
     title: 'Nextjs Amplify Guide',
     manifest: '/manifest.json',
     description: 'Showcase a Nextjs app with an Amplify backend',
+    themeColor: '#000000',
     icons: {
-        apple: '/apple-touch-icon.png'
+        apple: '/apple-touch-icon.png',
+        icon: [
+            {
+                url: '/favicon-16x16.png',
+                sizes: '16x16'
+            },
+            {
+                url: '/favicon-32x32.png',
+                sizes: '32x32'
+            }
+        ]
     }
 };
 
