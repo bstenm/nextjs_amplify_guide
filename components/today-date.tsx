@@ -10,7 +10,7 @@ export default function TodayDate({ locale }: { locale: string }): JSX.Element {
 
     return (
         <div className="opacity-50">
-            At {capitalize(t('dateToday'))}: {date}
+            {capitalize(t('dateToday'))}: {date}
         </div>
     );
 }
