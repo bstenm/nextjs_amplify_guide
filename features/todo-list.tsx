@@ -3,7 +3,7 @@ import compact from 'lodash/compact';
 import { GraphQLResult } from '@aws-amplify/api';
 
 import { listTodos } from '@/graphql/queries';
-import { ListTodosQuery, Todo } from '@/API';
+import { ListTodosQuery, Todo } from '@/_API';
 
 import '@aws-amplify/ui-react/styles.css';
 

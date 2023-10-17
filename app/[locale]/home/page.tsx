@@ -1,12 +1,12 @@
 import '@aws-amplify/ui-react/styles.css';
 
-import TodoList from '@/app/features/todo-list';
+import TodoList from '@/features/todo-list';
 import translate from '@/app/i18n';
-import CoinPrice from '@/app/features/coin-price';
+import CoinPrice from '@/features/coin-price';
+import TodayDate from '@/components/today-date';
 import AsyncAction from '@/components/async-action';
 import { MenuSidebar } from '@/components/sidebar-menu';
 import LanguageSelect from '@/components/language-select';
-import ClientComponent from '@/components/client-component';
 import TranslationsProvider from '@/components/translations-provider';
 
 type Props = {
@@ -20,7 +20,7 @@ export default async function Home({ locale }: Props): Promise<JSX.Element> {
         <TranslationsProvider namespaces={options.ns} locale={locale}>
             <main className="flex min-h-screen flex-col items-center justify-around  p-24">
                 <LanguageSelect />
-                <ClientComponent />
+                <TodayDate locale={locale} />
                 <AsyncAction locale={locale} errorId="errorFetchingCoinPrice">
                     <CoinPrice coinNumber={35} />
                 </AsyncAction>

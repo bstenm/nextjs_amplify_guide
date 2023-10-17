@@ -1,6 +1,6 @@
 projects:
   nextjsamplifyguide:
-    schemaPath: graphql/schema.json
+    schemaPath: src/graphql/schema.json
     includes:
       - graphql/**/*.ts
     excludes:
@@ -10,3 +10,6 @@ projects:
         codeGenTarget: typescript
         generatedFileName: API.ts
         docsFilePath: graphql
+extensions:
+  amplify:
+    version: 3

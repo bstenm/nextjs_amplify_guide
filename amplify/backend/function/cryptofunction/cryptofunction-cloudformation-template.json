@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.4.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.6.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "nextjsamplifyguideLambdaRole7bc57379",
+            "nextjsamplifyguideLambdaRole1d6cf4ef",
             {
               "Fn::Join": [
                 "",
                 [
-                  "nextjsamplifyguideLambdaRole7bc57379",
+                  "nextjsamplifyguideLambdaRole1d6cf4ef",
                   "-",
                   {
                     "Ref": "env"

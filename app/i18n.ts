@@ -3,6 +3,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { createInstance, i18n } from 'i18next';
 
 import i18nConfig from '@/i18n-config';
+import { debug, isDev } from '@/config';
 
 export default async function initTranslations(
     locale: string,
@@ -25,7 +26,8 @@ export default async function initTranslations(
             defaultNS: namespaces[0],
             fallbackNS: namespaces[0],
             ns: namespaces,
-            preload: typeof window === 'undefined' ? i18nConfig.locales : []
+            preload: typeof window === 'undefined' ? i18nConfig.locales : [],
+            debug: isDev && debug
         });
 
     return i18nInstance;
