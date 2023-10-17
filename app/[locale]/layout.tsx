@@ -15,7 +15,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Nextjs Amplify Guide',
-    description: 'Showcase a Nextjs app with an Amplify backend'
+    manifest: '/manifest.json',
+    description: 'Showcase a Nextjs app with an Amplify backend',
+    icons: {
+        apple: '/apple-touch-icon.png'
+    }
 };
 
 export function generateStaticParams(): { locale: string }[] {

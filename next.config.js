@@ -4,7 +4,9 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/dist/shared/lib/constants');
 
 const withPWA = require('next-pwa')({
-    dest: 'public'
+    dest: 'public',
+    register: true,
+    skipWaiting: true
 });
 
 module.exports = (phase) => {
