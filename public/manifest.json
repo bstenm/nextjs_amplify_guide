@@ -1,6 +1,6 @@
 {
     "short_name": "LuxVesting",
-    "name": "LuxVesting",
+    "name": "Lux Vesting",
     "icons": [
         {
             "src": "favicon.ico",
@@ -28,7 +28,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": ".",
+    "start_url": "/",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#47515E"
