@@ -23,5 +23,30 @@
         "nextjsamplifyguide": {}
       }
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nextjsamplifyguide-test-151902-authRole",
+      "UnauthRoleArn": "arn:aws:iam::785343946824:role/amplify-nextjsamplifyguide-test-151902-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::785343946824:role/amplify-nextjsamplifyguide-test-151902-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-nextjsamplifyguide-test-151902-deployment",
+      "UnauthRoleName": "amplify-nextjsamplifyguide-test-151902-unauthRole",
+      "StackName": "amplify-nextjsamplifyguide-test-151902",
+      "StackId": "arn:aws:cloudformation:us-east-1:785343946824:stack/amplify-nextjsamplifyguide-test-151902/be93b9c0-6cef-11ee-8778-12faa9a53d5f",
+      "AmplifyAppId": "d3ov7mzn2ij7p4"
+    },
+    "categories": {
+      "function": {
+        "cryptofunction": {
+          "deploymentBucketName": "amplify-nextjsamplifyguide-test-151902-deployment",
+          "s3Key": "amplify-builds/cryptofunction-6e726f586f41512b4471-build.zip"
+        }
+      },
+      "api": {
+        "cryptoapi": {},
+        "nextjsamplifyguide": {}
+      }
+    }
   }
 }
