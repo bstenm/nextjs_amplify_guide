@@ -10,9 +10,10 @@ const withPWA = require('next-pwa')({
 });
 
 module.exports = (phase) => {
-    return withPWA({
-        compiler: {
-            removeConsole: phase !== PHASE_DEVELOPMENT_SERVER
-        }
-    });
+    return {};
+    // return withPWA({
+    //     compiler: {
+    //         removeConsole: phase !== PHASE_DEVELOPMENT_SERVER
+    //     }
+    // });
 };
