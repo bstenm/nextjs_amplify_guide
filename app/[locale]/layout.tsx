@@ -8,16 +8,37 @@ import i18nConfig from '@/i18n-config';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import '@/app/globals.css';
+import { appDescription, appName, appTitle } from '@/config';
 
 Amplify.configure({ ...awsconfig, ssr: true });
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Nextjs Amplify Guide',
+    title: appTitle,
     manifest: '/manifest.json',
-    description: 'Showcase a Nextjs app with an Amplify backend',
-    themeColor: '#000000',
+    description: appDescription,
+    applicationName: appName,
+    themeColor: '#FFF',
+    appleWebApp: {
+        title: appTitle,
+        capable: true,
+        statusBarStyle: 'default'
+    },
+    formatDetection: {
+        telephone: false
+    },
+    openGraph: {
+        type: 'website',
+        siteName: appName,
+        title: appTitle,
+        description: appDescription
+    },
+    twitter: {
+        card: 'summary',
+        title: appTitle,
+        description: appDescription
+    },
     icons: {
         apple: '/apple-touch-icon.png',
         icon: [
