@@ -12,7 +12,7 @@ type Props = {
 
 export function ErrorMessage({ content }: { content: string }): JSX.Element {
     return (
-        <div className="flex flex-col items-center gap-2 text-purple-300">
+        <div className="flex flex-col items-center gap-2  text-sm text-purple-300">
             <p>{content}</p>
         </div>
     );
