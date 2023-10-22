@@ -31,7 +31,8 @@ yarn-error.log*
 .vercel
 
 # pwa
-public/*.map
+public/sw.*
+public/workbox-*.*
 
 # typescript
 *.tsbuildinfo
