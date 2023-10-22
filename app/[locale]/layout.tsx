@@ -6,9 +6,9 @@ import type { Metadata } from 'next';
 
 import i18nConfig from '@/i18n-config';
 import { ThemeProvider } from '@/components/theme-provider';
+import { appDescription, appName, appTitle } from '@/config';
 
 import '@/app/globals.css';
-import { appDescription, appName, appTitle } from '@/config';
 
 Amplify.configure({ ...awsconfig, ssr: true });
 
